@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Programación para Internet - A8 Tabla 4</title>
+    <style>
+        .tabla { width: 960px; height: 800px; border: 1px solid black; }
+        .fila { display: flex; }
+        .mitad-alto { height: 50%; }
+        .celda { border: 1px solid black; box-sizing: border-box; padding: 10px; }
+        .mitad { width: 50%; }
+        .completa { width: 100%; }
+        .pequena { width: 20px; }
+        .menu { width: 100px; }
+        .grande { flex: 1; }
+        .interna { width: 50%; height: 50%; margin: auto; }
+        .interna-grande { width: 100%; height: 100%; }
+        .bloque1 { height: 50%; }
+        .bloque2 { height: 50%; }
+    </style>
+</head>
+<body>
+    <div class="tabla">
+        <div class="fila mitad-alto">
+            <div class="celda mitad">
+                <div class="tabla interna">
+                    <div class="fila">
+                        <div class="celda completa">A</div>
+                    </div>
+                    <div class="fila">
+                        <div class="celda pequena">B</div>
+                        <div class="celda grande">C</div>
+                    </div>
+                </div>
+            </div>
+            <div class="celda mitad">
+                <div class="tabla interna">
+                    <div class="fila">
+                        <div class="celda completa">D</div>
+                    </div>
+                    <div class="fila">
+                        <div class="celda mitad">E</div>
+                        <div class="celda mitad">F</div>
+                    </div>
+                    <div class="fila">
+                        <div class="celda completa">G</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="fila mitad-alto">
+            <div class="celda mitad">
+                <div class="tabla interna">
+                    <div class="fila">
+                        <div class="celda completa">H</div>
+                    </div>
+                    <div class="fila">
+                        <div class="celda menu">I</div>
+                        <div class="celda grande">
+                            <div class="tabla interna-grande">
+                                <div class="fila">
+                                    <div class="celda completa">J</div>
+                                </div>
+                                <div class="fila">
+                                    <div class="celda completa">K</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="fila">
+                        <div class="celda completa">L</div>
+                    </div>
+                </div>
+            </div>
+            <div class="celda mitad">
+                <div class="tabla interna">
+                    <div class="fila bloque1">
+                        <div class="celda mitad">M</div>
+                        <div class="celda mitad">N</div>
+                    </div>
+                    <div class="fila bloque2">
+                        <div class="celda mitad">O</div>
+                        <div class="celda mitad">P</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
