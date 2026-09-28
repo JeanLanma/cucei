@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>A7. Eliminar filas con JS (jquery)</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+</head>
+ <body>
+    <table border="1" width="70%" height="700px" align="center">
+        <tr height="10%" align="center">
+            <td colspan="3">Tema de las imagenes</td>
+        </tr>
+        <tr id="fila1">
+            <td width="40%" height="18%" align="center">
+                <a href="https://html5.org/" target="_blank">
+                    <img src="./../imagenes/html.png" width="100" height="100" alt="Logo HTML">
+                </a>
+            </td>
+            <td width="40%" align="center">
+                <a href="https://html5.org/" target="_blank">
+                    HTML5
+                </a>
+            </td>
+            <td width="20%" align="center"><button type="button" onclick="eliminarFila(1)">Eliminar</button></td>
+        </tr>
+        <tr id="fila2">
+            <td width="40%" height="18%" align="center">
+                <a href="https://www.w3.org/Style/CSS/Overview.en.html" target="_blank">
+                    <img src="./../imagenes/css.png" width="100" height="100" alt="Logo CSS">
+                </a>
+            </td>
+            <td width="40%" align="center">
+                <a href="https://www.w3.org/Style/CSS/Overview.en.html" target="_blank">
+                    CSS
+                </a>
+            </td>
+            <td width="20%" align="center"><button type="button" onclick="eliminarFila(2)">Eliminar</button></td>
+        </tr>
+        <tr id="fila3">
+            <td width="40%" height="18%" align="center">
+                <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank">
+                    <img src="./../imagenes/js.png" width="100" height="100" alt="Logo Javascript">
+                </a>
+            </td>
+            <td width="40%" align="center">
+                <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank">
+                    JavaScript
+                </a>
+            </td>
+            <td width="20%" align="center"><button type="button" onclick="eliminarFila(3)">Eliminar</button></td>
+        </tr>
+        <tr id="fila4">
+            <td width="40%" height="18%" align="center">
+                <a href="https://www.php.net/" target="_blank">
+                    <img src="./../imagenes/PHP.png" width="100" height="100" alt="Logo PHP">
+                </a>
+            </td>
+            <td width="40%" align="center">
+                <a href="https://www.php.net/" target="_blank">
+                    PHP
+                </a>
+            </td>
+            <td width="20%" align="center"><button type="button" onclick="eliminarFila(4)">Eliminar</button></td>
+        </tr>
+        <tr id="fila5">
+            <td width="40%" height="18%" align="center">
+                <a href="https://www.mysql.com/" target="_blank">
+                    <img src="./../imagenes/MySQL.png" width="100" height="100" alt="Logo MySQL">
+                </a>
+            </td>
+            <td width="40%" align="center">
+                <a href="https://www.mysql.com/" target="_blank">
+                    MySQL
+                </a>
+            </td>
+            <td width="20%" align="center"><button type="button" onclick="eliminarFila(5)">Eliminar</button></td>
+        </tr>
+    </table>
+    <script>
+        function eliminarFila(id) {
+            if (confirm('¿Desea eliminar esta fila?')) {
+                $('#fila' + id).hide();
+            }
+        }
+    </script>
+</body>
+</html>
