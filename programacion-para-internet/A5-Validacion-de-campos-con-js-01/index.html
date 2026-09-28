@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A5. Validación de campos con JS 01</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+
+    <style>
+        #mensaje {
+            margin-top: 20px;
+            background-color: yellow;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div align="center">
+        <form id="formulario">
+            <label for="correo">Correo:</label>
+            <input type="text" id="correo" name="correo">
+            <br><br>
+
+            <label for="pass">Pass:</label>
+            <input type="text" id="pass" name="pass">
+            <br><br>
+
+            <label for="rol">Rol:</label>
+            <select id="rol" name="rol">
+                <option value="0">Selecciona</option>
+                <option value="1">Gerente</option>
+                <option value="2">Ejecutivo</option>
+            </select>
+            <br><br>
+
+            <button type="submit">Validar</button>
+        </form>
+        <div id="mensaje"></div>
+    </div>
+
+    <script>
+        $('#formulario').submit(function(evento) {
+            evento.preventDefault();
+            validarFormulario();
+        });
+
+        function validarFormulario() {
+            if ($('#correo').val() == '' || $('#pass').val() == '' || $('#rol').val() == '0') {
+                $('#mensaje').html('Faltan campos por llenar');
+            } else {
+                $('#mensaje').html('Campos llenos');
+            }
+            setTimeout("$('#mensaje').html('')", 3000);
+        }
+    </script>
+</body>
+</html>
