@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>A9. Eliminar divs con JS (jquery)</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <style>
+        .tabla {
+            width: 70%;
+            height: 700px;
+            margin: 0 auto;
+            border: 1px solid black;
+        }
+
+        .encabezado,
+        .fila {
+            display: flex;
+        }
+
+        .encabezado {
+            height: 10%;
+            align-items: center;
+            justify-content: center;
+            border-bottom: 1px solid black;
+        }
+
+        .fila {
+            height: 18%;
+        }
+
+        .columna {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-sizing: border-box;
+            border-right: 1px solid black;
+            border-bottom: 1px solid black;
+        }
+
+        .imagen {
+            width: 40%;
+        }
+
+        .tema {
+            width: 40%;
+        }
+
+        .eliminar {
+            width: 20%;
+            border-right: 0;
+        }
+    </style>
+</head>
+ <body>
+    <div class="tabla">
+        <div class="encabezado">Tema de las imagenes</div>
+        <div id="div1" class="fila">
+            <div class="columna imagen">
+                <a href="https://html5.org/" target="_blank">
+                    <img src="./../imagenes/html.png" width="100" height="100" alt="Logo HTML">
+                </a>
+            </div>
+            <div class="columna tema">
+                <a href="https://html5.org/" target="_blank">
+                    HTML5
+                </a>
+            </div>
+            <div class="columna eliminar"><button type="button" onclick="eliminarDiv(1)">Eliminar</button></div>
+        </div>
+        <div id="div2" class="fila">
+            <div class="columna imagen">
+                <a href="https://www.w3.org/Style/CSS/Overview.en.html" target="_blank">
+                    <img src="./../imagenes/css.png" width="100" height="100" alt="Logo CSS">
+                </a>
+            </div>
+            <div class="columna tema">
+                <a href="https://www.w3.org/Style/CSS/Overview.en.html" target="_blank">
+                    CSS
+                </a>
+            </div>
+            <div class="columna eliminar"><button type="button" onclick="eliminarDiv(2)">Eliminar</button></div>
+        </div>
+        <div id="div3" class="fila">
+            <div class="columna imagen">
+                <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank">
+                    <img src="./../imagenes/js.png" width="100" height="100" alt="Logo Javascript">
+                </a>
+            </div>
+            <div class="columna tema">
+                <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank">
+                    JavaScript
+                </a>
+            </div>
+            <div class="columna eliminar"><button type="button" onclick="eliminarDiv(3)">Eliminar</button></div>
+        </div>
+        <div id="div4" class="fila">
+            <div class="columna imagen">
+                <a href="https://www.php.net/" target="_blank">
+                    <img src="./../imagenes/PHP.png" width="100" height="100" alt="Logo PHP">
+                </a>
+            </div>
+            <div class="columna tema">
+                <a href="https://www.php.net/" target="_blank">
+                    PHP
+                </a>
+            </div>
+            <div class="columna eliminar"><button type="button" onclick="eliminarDiv(4)">Eliminar</button></div>
+        </div>
+        <div id="div5" class="fila">
+            <div class="columna imagen">
+                <a href="https://www.mysql.com/" target="_blank">
+                    <img src="./../imagenes/MySQL.png" width="100" height="100" alt="Logo MySQL">
+                </a>
+            </div>
+            <div class="columna tema">
+                <a href="https://www.mysql.com/" target="_blank">
+                    MySQL
+                </a>
+            </div>
+            <div class="columna eliminar"><button type="button" onclick="eliminarDiv(5)">Eliminar</button></div>
+        </div>
+    </div>
+    <script>
+        function eliminarDiv(id) {
+            if (confirm('¿Desea eliminar este contenedor?')) {
+                $('#div' + id).hide();
+            }
+        }
+    </script>
+</body>
+</html>
